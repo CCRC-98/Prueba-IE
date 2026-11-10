@@ -1,0 +1,105 @@
+{
+  "demoDate": "2030-03-12",
+  "minReservationMinutes": 60,
+  "reservationGraceMinutes": 15,
+  "locations": [
+    {
+      "id": "loc-bogota-norte",
+      "name": "Electroplaza Norte",
+      "city": "Bogotá",
+      "timeZone": "America/Bogota",
+      "openingTime": "06:00",
+      "closingTime": "22:00",
+      "zones": [
+        {
+          "id": "zone-basement-1",
+          "name": "Sótano 1",
+          "chargers": [
+            {
+              "id": "ac-001",
+              "name": "AC-001",
+              "type": "AC",
+              "maxSessionHours": 5,
+              "flatRateCop": 20000,
+              "session": {
+                "startedAt": "2030-03-12T08:00:00-05:00",
+                "endedAt": null,
+                "status": "active"
+              }
+            },
+            {
+              "id": "ac-002",
+              "name": "AC-002",
+              "type": "AC",
+              "maxSessionHours": 5,
+              "flatRateCop": 20000,
+              "session": null
+            },
+            {
+              "id": "dc-003",
+              "name": "DC-003",
+              "type": "DC",
+              "maxSessionHours": 2,
+              "flatRateCop": 22000,
+              "session": {
+                "startedAt": "2030-03-12T11:30:00-05:00",
+                "endedAt": null,
+                "status": "active"
+              }
+            }
+          ]
+        },
+        {
+          "id": "zone-basement-2",
+          "name": "Sótano 2",
+          "chargers": [
+            {
+              "id": "ac-004",
+              "name": "AC-004",
+              "type": "AC",
+              "maxSessionHours": 5,
+              "flatRateCop": 20000,
+              "session": {
+                "startedAt": "2030-03-12T09:00:00-05:00",
+                "endedAt": "2030-03-12T10:30:00-05:00",
+                "status": "ended"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-medellin-sur",
+      "name": "Centro Verde Sur",
+      "city": "Medellín",
+      "timeZone": "America/Bogota",
+      "openingTime": "07:00",
+      "closingTime": "20:00",
+      "zones": [
+        {
+          "id": "zone-plaza",
+          "name": "Plazoleta exterior",
+          "chargers": [
+            {
+              "id": "dc-101",
+              "name": "DC-101",
+              "type": "DC",
+              "maxSessionHours": 2,
+              "flatRateCop": 22000,
+              "session": null
+            },
+            {
+              "id": "ac-102",
+              "name": "AC-102",
+              "type": "AC",
+              "maxSessionHours": 5,
+              "flatRateCop": 20000,
+              "session": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

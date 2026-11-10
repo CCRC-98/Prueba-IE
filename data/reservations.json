@@ -1,0 +1,51 @@
+[
+  {
+    "id": "res-demo-001",
+    "userId": "usuario-demo",
+    "chargerId": "ac-002",
+    "startAt": "2030-03-12T14:00:00-05:00",
+    "endAt": "2030-03-12T15:00:00-05:00",
+    "priceCop": 20000,
+    "status": "confirmed"
+  },
+  {
+    "id": "res-bb7cf4c4-5c58-4ec9-b26e-e3c536e1c79a",
+    "userId": "usuario-demo",
+    "chargerId": "ac-001",
+    "startAt": "2030-03-12T06:00:00-05:00",
+    "endAt": "2030-03-12T08:00:00-05:00",
+    "priceCop": 20000,
+    "status": "confirmed",
+    "createdAt": "2026-11-10T21:07:15.450Z"
+  },
+  {
+    "id": "res-575b7782-09c6-4010-a702-4c1b09d7cb0d",
+    "userId": "camilo",
+    "chargerId": "dc-101",
+    "startAt": "2030-03-12T07:00:00-05:00",
+    "endAt": "2030-03-12T08:00:00-05:00",
+    "priceCop": 22000,
+    "status": "confirmed",
+    "createdAt": "2026-11-10T21:14:39.158Z"
+  },
+  {
+    "id": "res-7892b978-d274-47d8-843c-5b5a87e2818e",
+    "userId": "usuario-demo",
+    "chargerId": "dc-101",
+    "startAt": "2030-03-12T08:00:00-05:00",
+    "endAt": "2030-03-12T10:00:00-05:00",
+    "priceCop": 22000,
+    "status": "confirmed",
+    "createdAt": "2026-11-10T21:16:22.164Z"
+  },
+  {
+    "id": "res-6e88ddaa-d46b-451d-9e3e-6a5bd22a2373",
+    "userId": "usuario-demo",
+    "chargerId": "dc-101",
+    "startAt": "2030-03-12T13:00:00-05:00",
+    "endAt": "2030-03-12T14:00:00-05:00",
+    "priceCop": 22000,
+    "status": "confirmed",
+    "createdAt": "2026-11-10T21:51:48.131Z"
+  }
+]
