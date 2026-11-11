@@ -47,5 +47,15 @@
     "priceCop": 22000,
     "status": "confirmed",
     "createdAt": "2026-11-10T21:51:48.131Z"
+  },
+  {
+    "id": "res-fd263507-bfaa-4e69-a705-86c4a0b58388",
+    "userId": "usuario-demo",
+    "chargerId": "ac-002",
+    "startAt": "2030-03-12T18:00:00-05:00",
+    "endAt": "2030-03-12T22:00:00-05:00",
+    "priceCop": 20000,
+    "status": "confirmed",
+    "createdAt": "2026-11-10T23:37:27.497Z"
   }
 ]

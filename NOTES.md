@@ -1,5 +1,33 @@
 # Notas de implementación — Fase 2
 
+## Aclaraciones
+
+## Aclaraciones
+
+La solución fue desarrollada con apoyo de inteligencia artificial, utilizando el agente OpenCode. El código generado fue revisado y validado frente a los requerimientos de la prueba. No obstante, considero importante aclarar algunas decisiones:
+
+**1. Granularidad de los intervalos**
+
+En la fase 1 propuse una granularidad de una hora, principalmente por simplicidad de implementación. Sin embargo, al analizar el comportamiento de la disponibilidad, identifiqué que esto podría generar tiempos muertos inferiores a 30 minutos que no podrían aprovecharse. Por esta razón, después de revisar el escenario con apoyo de IA, opté por una granularidad de 30 minutos, que ofrece mayor flexibilidad para las reservas y se ajusta al valor predeterminado del README.
+
+**2. Organización y arquitectura del proyecto**
+
+Por el alcance y el tiempo disponible, implementé el frontend y el backend dentro de Next.js mediante sus API Routes. Para un proyecto real preferiría separarlos y gestionarlos en un monorepo, utilizando NestJS para el backend.
+
+Partiría de una arquitectura de monolito modular, complementada con principios de Clean Architecture o arquitectura hexagonal según las necesidades del dominio. Esto permitiría mantener separadas las responsabilidades, organizar la lógica de negocio y facilitar la evolución del sistema sin introducir complejidad innecesaria desde el inicio.
+
+**3. Supuestos funcionales y decisiones por validar con el cliente**
+
+La prueba requiere asumir ciertos comportamientos que en un proyecto real deberían aclararse con el cliente.
+
+Por ejemplo, el usuario solicitado en el formulario debería obtenerse del token de acceso si la funcionalidad es privada. Si es pública, habría que definir qué información solicitar y cómo validar la identidad de quien realiza la reserva.
+
+También revisaría la selección de localidad, zona y cargador. Si existen muchas localidades, sería conveniente organizar la selección jerárquicamente: ciudad, localidad y zona. Sin embargo, la necesidad de seleccionar una zona dependería de su distribución geográfica y de si realmente representa una diferencia relevante para el usuario; por ejemplo, dos sótanos de un mismo edificio podrían no requerir una selección independiente.
+
+De igual manera, evaluaría si es necesario que el usuario seleccione un cargador específico. Si los cargadores del mismo tipo (AC o DC) tienen las mismas tarifas y condiciones, el backend podría asignar automáticamente uno disponible, dejando al usuario seleccionar únicamente el tipo y horario. El cargador asignado se mostraría en el resumen de la reserva. Si existen diferencias de tarifas o características, sí sería conveniente permitir su selección y mostrar claramente esas diferencias.
+
+Estas decisiones afectarían tanto la lógica del backend como la usabilidad de la aplicación, por lo que deberían definirse según las necesidades reales del negocio.
+
 ## 1. Alcance implementado
 
 - Pantalla `/reservas` con selector de localidad, zona y cargador; grilla de slots de 30 minutos; selección de inicio y duración; resumen de fin, duración y precio; y listado de reservas del usuario.
